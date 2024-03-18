@@ -1,4 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Digimon-Font;
+    src: url(./assets/fonts/DigimonBasic.ttf) format("truetype");
+}
+@font-face {
+    font-family: Digital-Monster;
+    src: url(./assets/fonts/Belgrad.ttf) format("truetype");
+}
 .tada {
     -webkit-animation-name: tada;
     animation-name: tada;
@@ -36,45 +43,10 @@
     }
 
     100% {
-        // -webkit-transform: scale3d(1, 1, 1);
-        // transform: scale3d(1, 1, 1);
         -webkit-transform: scale3d(1.1, 1.1, 1.1);
         transform: scale3d(1.1, 1.1, 1.1) ;
     }
 }
-
-// @keyframes tada {
-//     0% {
-//         -webkit-transform: scale3d(1, 1, 1);
-//         transform: scale3d(1, 1, 1);
-//     }
-
-//     10%,
-//     20% {
-//         -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-//         transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-//     }
-
-//     30%,
-//     50%,
-//     70%,
-//     90% {
-//         -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-//         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-//     }
-
-//     40%,
-//     60%,
-//     80% {
-//         -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-//         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-//     }
-
-//     100% {
-//         -webkit-transform: scale3d(1, 1, 1);
-//         transform: scale3d(1, 1, 1);
-//     }
-// }
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
