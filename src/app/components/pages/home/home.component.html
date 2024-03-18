@@ -1,4 +1,40 @@
-<p>home works!</p>
-<input type="text" id="search" #input (keyup)="searchDigimonName(input.value)">
-<br>
-<input type="text" id="search" #input (keyup)="searchDigimonLevel(input.value)">
+<body class="content fadeIn">
+    <div class="content-header">
+        <img src="../../../../assets/digimon-logo.jpeg" alt="">
+    </div>
+    <div class="content-body">
+        <div class="search">
+            <input type="text" id="search" #input (keyup)="searchDigimonName(input.value)"
+                placeholder="Busque um digimon...">
+            <select id="digimonLevel" (change)="searchDigimonLevel()" required>
+                <br>
+                <option value="All">All</option>
+                <option value="rookie">Rookie</option>
+                <option value="inTraining">In Training</option>
+                <option value="Fresh">Fresh</option>
+                <option value="champion">Champion</option>
+                <option value="Ultimate">Ultimate</option>
+                <option value="Mega">Mega</option>
+                <option value="Armor">Armor</option>
+            </select>
+        </div>
+        <div class="list-digimons">
+            <div class="list" *ngFor="let digimon of getDigimonList">
+                <div class="info tada">
+                    <h1 class="digimon-name">
+                        {{digimon.name}}
+                    </h1>
+                    <h2 class="digimon-level">
+                        {{digimon.level}}
+                    </h2>
+                    <div class="digimon-img">
+                        <img [src]="digimon.img">
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <img src="assets/error.png" alt="Deu erro na para achar o digimon" width="100%" *ngIf="apiError">
+    </div>
+</body>

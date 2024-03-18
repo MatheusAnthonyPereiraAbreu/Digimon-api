@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+
+    .content-header {
+        margin: 50px 0px;
+
+        img {
+            width: 1000px;
+            height: 100px;
+        }
+    }
+
+    .content-body {
+        width: 50%;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // background-color: aqua;
+        background: linear-gradient(to bottom, rgb(255, 208, 0), #ff7b00);
+        border: 5px solid #00d9ff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px rgb(255, 252, 252);
+
+        .search {
+            width: 100%;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // background-color: #00aeff;
+            border-radius: 10px;
+
+            input,
+            select {
+                all: unset;
+                width: 500px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                margin: 10px 50px 10px 50px;
+                background-color: #ffffff;
+                color: #000000;
+                border-radius: 5px;
+            }
+
+            select {
+                cursor: pointer;
+            }
+        }
+
+        .list-digimons {
+            width: 100%;
+            // margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .list {
+                // background-color: blue;
+                margin: 30px;
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 0.3s ease;
+                    .digimon-name {
+                        color: #000000;
+                        font-size: 32px;
+                        transition: all 0.5s ease;
+                    }
+
+                    .digimon-level {
+                        font-size: 24px;
+                        color: #000000;
+                        transition: all 0.5s ease;
+                    }
+
+                    .digimon-img {
+                        img {
+                            width: 200px;
+                            height: 200px;
+                            border-radius: 100%;
+                        }
+                    }
+
+                    &:hover{
+                        h1{
+                            color: #0044ff;
+                        }
+                        h2{
+                            color: #a82828;
+                        }
+                    }
+                }
+                &:hover {
+                    cursor: pointer;
+                    -webkit-animation-name: tada;
+                    animation-name: tada;
+                    -webkit-animation-duration: 1s;
+                    animation-duration: 1s;
+                    -webkit-animation-fill-mode: both;
+                    animation-fill-mode: both;
+
+
+                }
+
+            }
+        }
+    }
+}
