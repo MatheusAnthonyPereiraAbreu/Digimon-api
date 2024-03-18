@@ -1,6 +1,5 @@
 import { Component,EventEmitter,OnInit, Output } from '@angular/core';
 import { DigimonService } from '../../services/digimon.service';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,19 +7,41 @@ import { DigimonService } from '../../services/digimon.service';
 })
 export class HomeComponent implements OnInit {
 
+  private setAllDigimons:any;
+  public  getDigimonList:any;
+  public apiError: boolean = false;
+
+
   constructor(private digimonService: DigimonService) {} // Injeção do serviço
-
-  ngOnInit(): void {
-    console.log(this.digimonService.getAllDigimon());
-  }
   @Output() public emitSearch: EventEmitter<string> = new EventEmitter();
-
-  public searchDigimonName(value:string){
-    const digimonName = this.digimonService.findDigimonName(value);
+  ngOnInit(): void {
+    this.digimonService.getAllDigimon().then(res => {
+      this.setAllDigimons = res;
+      this.getDigimonList = this.setAllDigimons;
+      console.log(this.getDigimonList);
+    })
+    .catch(error => {
+      this.apiError = true;
+    });
   }
 
-  public searchDigimonLevel(value:string){
-    const digimonLevel = this.digimonService.findDigimonLevel(value);
+  public searchDigimonName(value: string) {
+    // const filter = this.setAllDigimons.filter( (res:any ) => {
+    //   console.log(!res.name.indexOf(value))
+    //   return !res.name.indexOf(value);
+    // });
+    const selectName = this.digimonService.findDigimonName(value).then(name => {
+      console.log(name);
+      this.getDigimonList = name;
+  });
   }
-  
+
+  public searchDigimonLevel(){
+    const select = document.getElementById("digimonLevel") as HTMLSelectElement;
+    const selectedValue = select.value; // Aqui está o valor selecionado como uma string
+    const selectLevel = this.digimonService.findDigimonLevel(selectedValue).then(level =>{
+      console.log(level)
+      this.getDigimonList = level;
+    });
+  }
 }
