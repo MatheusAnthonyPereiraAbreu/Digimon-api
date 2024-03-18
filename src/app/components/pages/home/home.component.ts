@@ -26,14 +26,15 @@ export class HomeComponent implements OnInit {
   }
 
   public searchDigimonName(value: string) {
-    // const filter = this.setAllDigimons.filter( (res:any ) => {
-    //   console.log(!res.name.indexOf(value))
-    //   return !res.name.indexOf(value);
-    // });
-    const selectName = this.digimonService.findDigimonName(value).then(name => {
-      console.log(name);
-      this.getDigimonList = name;
-  });
+    const filter = this.setAllDigimons.filter( (res:any ) => {
+      console.log(!res.name.indexOf(value))
+      return !res.name.indexOf(value);
+    });
+    this.getDigimonList = filter
+  //   const selectName = this.digimonService.findDigimonName(value).then(name => {
+  //     console.log(name);
+  //     this.getDigimonList = name;
+  // });
   }
 
   public searchDigimonLevel(){

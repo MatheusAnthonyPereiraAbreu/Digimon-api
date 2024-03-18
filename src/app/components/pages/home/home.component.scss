@@ -1,6 +1,9 @@
-* {
+:host {
+    height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: "Digital-Monster";
+    font-weight: bold;
 }
 
 .content {
@@ -23,16 +26,15 @@
 
     .content-body {
         width: 50%;
-        margin-bottom: 50px;
+        margin-bottom: 800px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // background-color: aqua;
         background: linear-gradient(to bottom, rgb(255, 208, 0), #ff7b00);
-        border: 5px solid #00d9ff;
+        border: 5px solid  rgb(255, 252, 252);
         border-radius: 10px;
-        box-shadow: 0px 0px 10px 5px rgb(255, 252, 252);
+        box-shadow: 0px 0px 10px 5px #00d9ff;
 
         .search {
             width: 100%;
@@ -40,50 +42,66 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            // background-color: #00aeff;
             border-radius: 10px;
 
-            input,
-            select {
+            .search-name input,
+            .search-level select {
                 all: unset;
-                width: 500px;
+            }
+            .search-level select {
+                cursor: pointer;
+            }
+            .search-name, .search-level{
+                width: 400px;
                 height: 40px;
                 line-height: 40px;
-                text-align: center;
+                font-size: 20px;
                 margin: 10px 50px 10px 50px;
+                padding-right: 20px;
+                padding-left: 30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                border-radius: 5px;
                 background-color: #ffffff;
                 color: #000000;
-                border-radius: 5px;
-            }
-
-            select {
-                cursor: pointer;
+                span{
+                    font-size: 30px;
+                }
+                select{
+                    width: 250px;
+                    height: 40px;
+                }
             }
         }
 
         .list-digimons {
             width: 100%;
-            // margin-top: 20px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
 
             .list {
-                // background-color: blue;
                 margin: 30px;
 
                 .info {
+                    width: 200px;
+                    height: 350px;
                     display: flex;
                     flex-direction: column;
-                    flex-wrap: wrap;
                     justify-content: center;
                     align-items: center;
                     transition: all 0.3s ease;
+                    padding: 0;
+
                     .digimon-name {
                         color: #000000;
                         font-size: 32px;
                         transition: all 0.5s ease;
+                        margin-bottom: -10px;
                     }
 
                     .digimon-level {
@@ -100,15 +118,21 @@
                         }
                     }
 
-                    &:hover{
-                        h1{
-                            color: #0044ff;
+                    &:hover {
+                        h1 {
+                            font-family: 'Digimon-font';
+                            background: linear-gradient(to bottom, rgb(253, 173, 24), #ff4800);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
                         }
-                        h2{
+
+                        h2 {
                             color: #a82828;
                         }
                     }
                 }
+
                 &:hover {
                     cursor: pointer;
                     -webkit-animation-name: tada;
@@ -117,8 +141,6 @@
                     animation-duration: 1s;
                     -webkit-animation-fill-mode: both;
                     animation-fill-mode: both;
-
-
                 }
 
             }
