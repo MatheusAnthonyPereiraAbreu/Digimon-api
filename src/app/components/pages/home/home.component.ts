@@ -14,13 +14,14 @@ export class HomeComponent implements OnInit {
 
   constructor(private digimonService: DigimonService) {} // Injeção do serviço
   ngOnInit(): void {
-    this.digimonService.getAllDigimon().then(res => {
-      this.setAllDigimons = res;
-      this.getDigimonList = this.setAllDigimons;
-    })
-    .catch(error => {
-      this.apiError = true;
-    });
+    this.digimonService.getAllDigimon().subscribe(res => {
+        this.setAllDigimons = res;
+        this.getDigimonList = this.setAllDigimons;
+      },
+      error => {
+        this.apiError = true;
+      }
+    );
   }
 
   public searchDigimonName(value: string) {
@@ -28,15 +29,12 @@ export class HomeComponent implements OnInit {
       return !res.name.toLowerCase().indexOf(value.toLowerCase());
     });
     this.getDigimonList = filter
-  //   const selectName = this.digimonService.findDigimonName(value).then(name => {
-  //     this.getDigimonList = name;
-  // });
   }
 
   public searchDigimonLevel(){
     const select = document.getElementById("digimonLevel") as HTMLSelectElement;
     const selectedValue = select.value; // Aqui está o valor selecionado como uma string
-    const selectLevel = this.digimonService.findDigimonLevel(selectedValue).then(level =>{
+    const selectLevel = this.digimonService.findDigimonLevel(selectedValue).subscribe(level =>{
       this.getDigimonList = level;
     });
   }
