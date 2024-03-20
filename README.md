@@ -6,10 +6,9 @@ Projeto Angular DigimonApi 👾
 
 ## -🦾Ferramentas
 <br>
-- Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) na versão 17.2.0.
+- Este projeto foi gerado com o ![Angular CLI](https://github.com/angular/angular-cli) na versão 17.2.0.
 <br>
-<br>
-- Este Projeto foi gerado com o [Node](https://nodejs.org/en) na versão 20.10.0.
+- Este Projeto foi gerado com o ![Node](https://nodejs.org/en) na versão 20.10.0.
 <br>
 ## -🧩Configuração Inicial
 <br>
