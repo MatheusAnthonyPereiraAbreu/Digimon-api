@@ -29,7 +29,6 @@ Projeto Angular DigimonApi 👾
 `cd Digimon-api`
 
 ## 📥Instalando Dependências
-<br>
 -Após clonar o repositório e navegar até a pasta do projeto, execute o seguinte comando para instalar as dependências do projeto:
 
 `npm install`
