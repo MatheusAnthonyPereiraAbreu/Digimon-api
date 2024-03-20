@@ -10,7 +10,7 @@ Projeto Angular DigimonApi 👾
 <br>
 - Este Projeto foi gerado com o ![Node](https://nodejs.org/en) na versão 20.10.0.
 <br>
-## -🧩Configuração Inicial
+## 🧩Configuração Inicial
 <br>
 -Pré-requisitos:
 <br>
