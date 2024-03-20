@@ -1,4 +1,6 @@
+<div align ="center">
 # Projeto Angular DigimonApi
+</div>
 
 Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) na versão 17.2.0.
 
