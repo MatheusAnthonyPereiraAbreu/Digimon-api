@@ -1,5 +1,5 @@
 <body class="content fadeIn">
-    <div class="content-header">
+    <div class="content-header fadeInLeft">
         <img src="../../../../assets/images/digimon-logo.jpeg" alt="">
     </div>
     <div class="content-body">
@@ -14,7 +14,7 @@
             <div class="search-level">
                 <select id="digimonLevel" (change)="searchDigimonLevel()" required>
                     <br>
-                    <option value="All">All</option>
+                    <option value="All">Level</option>
                     <option value="rookie">Rookie</option>
                     <option value="inTraining">In Training</option>
                     <option value="Fresh">Fresh</option>
@@ -28,9 +28,9 @@
                     </span>
             </div>
         </div>
-        <div class="list-digimons">
+        <div class="list-digimons" *ngIf="!apiError">
             <div class="list" *ngFor="let digimon of getDigimonList">
-                <div class="info tada">
+                <div class="info tada" [routerLink]="['details',digimon.name]">
                     <h1 class="digimon-name">
                         {{digimon.name}}
                     </h1>
@@ -44,7 +44,9 @@
             </div>
             <br>
         </div>
-
-        <img src="assets/error.png" alt="Deu erro na para achar o digimon" width="100%" *ngIf="apiError">
+        <div class="erro" *ngIf="apiError">
+            <h1>Seus digimons não encontraram o caminho para o D.M.A...</h1>
+            <img class="imgError" src="../../../../assets/images/erro.png" alt="Deu erro na para achar o digimon" width="100%" >
+        </div>
     </div>
 </body>

@@ -1,0 +1,34 @@
+<body class="content fadeIn" >
+    <div class="content-header fadeInLeft">
+        <img src="../../../../assets/images/digimon-logo.jpeg" alt="">
+    </div>
+    <div class="content-body" *ngIf="isLoading">
+        <div class="back">
+            <span class="material-symbols-outlined" [routerLink]="['']">
+                arrow_back
+            </span>
+        </div>
+        <div class="digimon">
+            <div class="info">
+                <div class="digimon-img tada">
+                    <img [src]="digimon[0].img">
+                </div>
+                <div class="data">
+                    <h1 class="digimon-name">
+                        {{digimon[0].name}}
+                    </h1>
+                    <h2 class="digimon-level">
+                        {{digimon[0].level}}
+                    </h2>
+                </div>
+            </div>
+            <br>
+        </div>
+
+    </div>
+    <div class="erro fadeIn" *ngIf="!isLoading">
+        <h1>Seus digimons não encontraram o caminho para o D.M.A...</h1>
+        <img class="imgError" src="../../../../assets/images/erro.png" alt="Deu erro na para achar o digimon"
+            width="100%">
+    </div>
+</body>

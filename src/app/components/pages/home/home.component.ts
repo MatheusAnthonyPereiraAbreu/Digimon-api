@@ -13,12 +13,10 @@ export class HomeComponent implements OnInit {
 
 
   constructor(private digimonService: DigimonService) {} // Injeção do serviço
-  @Output() public emitSearch: EventEmitter<string> = new EventEmitter();
   ngOnInit(): void {
     this.digimonService.getAllDigimon().then(res => {
       this.setAllDigimons = res;
       this.getDigimonList = this.setAllDigimons;
-      console.log(this.getDigimonList);
     })
     .catch(error => {
       this.apiError = true;
@@ -27,12 +25,10 @@ export class HomeComponent implements OnInit {
 
   public searchDigimonName(value: string) {
     const filter = this.setAllDigimons.filter( (res:any ) => {
-      console.log(!res.name.indexOf(value))
-      return !res.name.indexOf(value);
+      return !res.name.toLowerCase().indexOf(value.toLowerCase());
     });
     this.getDigimonList = filter
   //   const selectName = this.digimonService.findDigimonName(value).then(name => {
-  //     console.log(name);
   //     this.getDigimonList = name;
   // });
   }
@@ -41,7 +37,6 @@ export class HomeComponent implements OnInit {
     const select = document.getElementById("digimonLevel") as HTMLSelectElement;
     const selectedValue = select.value; // Aqui está o valor selecionado como uma string
     const selectLevel = this.digimonService.findDigimonLevel(selectedValue).then(level =>{
-      console.log(level)
       this.getDigimonList = level;
     });
   }
