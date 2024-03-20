@@ -32,19 +32,19 @@ Após instalar as dependências, execute o seguinte comando para iniciar o servi
 
 O projeto estará disponível em http://localhost:4200/ no seu navegador.
 
-## Uso
+# Uso
 Este projeto em Angular utiliza a API de Digimon para fornecer uma interface onde é possível visualizar todos os Digimons, pesquisar por nome e filtrar por nível.
 
-# Tela Inicial
+## Tela Inicial
 Na tela inicial do projeto, você encontrará uma lista com todos os Digimons disponíveis, juntamente com uma barra de pesquisa e um filtro de níveis.
 
-# Lista de Digimons
+## Lista de Digimons
 A lista exibe todos os Digimons disponíveis, mostrando informações como nome, imagem e nível.
 
-# Barra de Pesquisa
+## Barra de Pesquisa
 A barra de pesquisa permite que você pesquise Digimons específicos pelo nome. Ao digitar o nome do Digimon desejado, a lista será filtrada para exibir apenas os Digimons que correspondem ao termo pesquisado.
 
-# Filtro por Níveis
+## Filtro por Níveis
 Ao lado da barra de pesquisa, há um filtro que permite selecionar o nível dos Digimons que deseja visualizar. Os níveis disponíveis incluem:
 
 -Rookie
@@ -62,7 +62,7 @@ Se desejar, use o filtro para visualizar apenas Digimons de um nível específic
 Você também pode combinar a pesquisa por nome e o filtro por nível para encontrar Digimons de maneira mais precisa.
 Com essas funcionalidades, o projeto permite explorar e interagir com a API de Digimon de forma fácil e intuitiva.
 
-# Detalhes do Digimon
+## Detalhes do Digimon
 Ao clicar em um Digimon na lista, você será redirecionado para uma página de detalhes. Nesta página, você poderá visualizar informações detalhadas sobre o Digimon selecionado, incluindo:
 
 Nome: O nome único do Digimon.
