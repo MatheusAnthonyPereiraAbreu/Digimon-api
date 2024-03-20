@@ -9,16 +9,15 @@ Projeto Angular DigimonApi 👾
 - Este projeto foi gerado com o ![Angular CLI](https://github.com/angular/angular-cli) na versão 17.2.0.
 <br>
 - Este Projeto foi gerado com o ![Node](https://nodejs.org/en) na versão 20.10.0.
-<br>
+
 ## 🧩Configuração Inicial
 <br>
 -Pré-requisitos:
 <br>
 <br>
 -Antes de começar, certifique-se de ter o Node.js e o npm instalados em sua máquina. Caso não tenha, você pode baixá-los e instalá-los no seguinte link: [Node](https://nodejs.org/en)
-<br>
 
-## -📑Clonando o Repositório
+## 📑Clonando o Repositório
 <br>
 -Abra o terminal ou prompt de comando.
 <br>
