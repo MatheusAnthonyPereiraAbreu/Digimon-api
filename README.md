@@ -2,6 +2,7 @@
 <h1>Projeto Angular DigimonApi</h1>
 </div>
 
+<br>
 Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) na versão 17.2.0.
 
 ## Configuração Inicial
