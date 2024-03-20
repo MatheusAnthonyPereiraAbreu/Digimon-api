@@ -7,7 +7,7 @@ Projeto Angular DigimonApi 👾
 ## 🦾Ferramentas
 -Este projeto foi gerado com o https://angular.io/ na versão 17.2.0.
 <br>
-Este Projeto foi gerado com o https://nodejs.org/en na versão 20.10.0.
+-Este Projeto foi gerado com o https://nodejs.org/en na versão 20.10.0.
 
 ## 🧩Configuração Inicial
 -Pré-requisitos:
