@@ -1,6 +1,6 @@
 <div align ="center">
-<h1>![image](https://github.com/MatheusAnthonyPereiraAbreu/Digimon-api/assets/125830906/ed9a6368-efb2-4df3-a88a-f0574bbeafb6)
-Projeto Angular DigimonApi ![image](https://github.com/MatheusAnthonyPereiraAbreu/Digimon-api/assets/125830906/abe76808-cf11-4080-9f42-054880c4c29b)
+<h1>👾
+Projeto Angular DigimonApi 👾
 </h1>
 </div>
 
