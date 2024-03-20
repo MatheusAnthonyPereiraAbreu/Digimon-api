@@ -1,15 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
-
+import { environment } from '../../../environments/environment';
+;
+//Ajsuar a promise.
 @Injectable({
   providedIn: 'root'
 })
 export class DigimonService {
-  constructor(private http: HttpClient) { }
-  private urlDigimon: string = 'https://digimon-api.vercel.app/api/digimon';
-  private urlName: string = 'https://digimon-api.vercel.app/api/digimon/name/';
-  private urlLevel: string = 'https://digimon-api.vercel.app/api/digimon/level/';
+  constructor(private http: HttpClient, //colocar o enviroments aq;
+  ) { }
+  private url = environment.apiUrl;
+  private urlDigimon: string = `${this.url}/api/digimon`;
+  private urlName: string = `${this.url}/api/digimon/name/`;
+  private urlLevel: string = `${this.url}/api/digimon/level/`;
 
   private DigiApi = async () => {
     const api = fetch(this.urlDigimon)
@@ -29,6 +33,7 @@ export class DigimonService {
 
   public async getAllDigimon() {
     const digiArray = await this.DigiApi();
+    
     return digiArray;
   };
 
