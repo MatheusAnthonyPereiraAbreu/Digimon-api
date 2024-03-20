@@ -18,9 +18,7 @@ Projeto Angular DigimonApi 👾
 ## 📑Clonando o Repositório
 -Abra o terminal ou prompt de comando.
 <br>
-<br>
 -Navegue até a pasta onde deseja clonar o repositório.
-<br>
 <br>
 -Execute o seguinte comando para clonar o repositório:
 
@@ -38,7 +36,7 @@ Projeto Angular DigimonApi 👾
 <br>
 
 ## 🖥Executando o Projeto Localmente
-<br>
+
 -Após instalar as dependências, execute o seguinte comando para iniciar o servidor de desenvolvimento:
 
 `ng serve`
@@ -52,15 +50,12 @@ Projeto Angular DigimonApi 👾
 -Na tela inicial do projeto, você encontrará uma lista com todos os Digimons disponíveis, juntamente com uma barra de pesquisa e um filtro de níveis.
 
 <h3>📜Lista de Digimons</h3>
-<br>
 -A lista exibe todos os Digimons disponíveis, mostrando informações como nome, imagem e nível.
 
 <h3>🔍Barra de Pesquisa</h3>
-<br>
 -A barra de pesquisa permite que você pesquise Digimons específicos pelo nome. Ao digitar o nome do Digimon desejado, a lista será filtrada para exibir apenas os Digimons que correspondem ao termo pesquisado.
 <br>
 <h3>📚Filtro por Níveis</h3>
-<br>
 -Ao lado da barra de pesquisa, há um filtro que permite selecionar o nível dos Digimons que deseja visualizar. Os níveis disponíveis incluem:
 
 - Rookie
@@ -72,7 +67,6 @@ Projeto Angular DigimonApi 👾
 -Ao selecionar um nível, a lista de Digimons será filtrada para exibir apenas aqueles que possuem o nível escolhido.
 
 # ✏️Exemplo de Uso
-<br>
 -Ao acessar a tela inicial, você verá todos os Digimons listados.
 <br>
 -Utilize a barra de pesquisa para encontrar um Digimon específico pelo nome. Por exemplo, pesquise por "Agumon".
@@ -84,7 +78,6 @@ Projeto Angular DigimonApi 👾
 -Com essas funcionalidades, o projeto permite explorar e interagir com a API de Digimon de forma fácil e intuitiva.
 
 ## -📖Detalhes do Digimon
-<br>
 -Ao clicar em um Digimon na lista, você será redirecionado para uma página de detalhes. Nesta página, você poderá visualizar informações detalhadas sobre o Digimon selecionado, incluindo:
 <br>
 * Nome: O nome único do Digimon.
